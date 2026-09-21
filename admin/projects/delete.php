@@ -1,0 +1,1 @@
+<?php require dirname(__DIR__,2).'/bootstrap.php';require_admin();if($_SERVER['REQUEST_METHOD']==='POST'){verify_csrf();$service->projects()->delete($_POST['id']??'');flash('success','Project deleted.');}redirect('/admin/projects/index.php');

@@ -1,0 +1,1 @@
+<?php require dirname(__DIR__,2).'/bootstrap.php';require_admin();if($_SERVER['REQUEST_METHOD']==='POST'){verify_csrf();$service->contacts()->delete($_POST['id']??'');flash('success','Message deleted.');}redirect('/admin/contacts/index.php');

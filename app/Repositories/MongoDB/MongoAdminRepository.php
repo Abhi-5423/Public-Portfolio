@@ -1,0 +1,2 @@
+<?php namespace App\Repositories\MongoDB; use App\Repositories\Interfaces\AdminRepositoryInterface; use MongoDB\BSON\UTCDateTime;
+final class MongoAdminRepository extends MongoRepository implements AdminRepositoryInterface { private function c(){return $this->db->db()->admins;} public function findByUsername(string $u):?array{$x=$this->c()->findOne(['username'=>$u]);return $x?$this->row($x):null;} public function save(string $u,string $h):string{return (string)$this->c()->insertOne(['username'=>$u,'password_hash'=>$h,'created_at'=>new UTCDateTime()])->getInsertedId();} }

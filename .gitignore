@@ -1,0 +1,7 @@
+.env
+/vendor/
+/storage/database.json
+/storage/sessions/*
+!/storage/sessions/.gitkeep
+/public/uploads/projects/*
+!/public/uploads/projects/.gitkeep
