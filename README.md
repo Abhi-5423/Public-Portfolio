@@ -58,6 +58,18 @@ Replace the student name, college, email/phone, GitHub, LinkedIn, profile image 
 
 ## Deployment
 
+### Deploy to Render.com (Recommended & Free)
+
+This repository includes a `Dockerfile` and `render.yaml` for instant deployment on [Render](https://render.com):
+
+1. Go to [dashboard.render.com](https://dashboard.render.com/) and sign in with your GitHub account.
+2. Click **New +** and select **Web Service** (or **Blueprint**).
+3. Connect your repository: `https://github.com/Abhi-5423/Public-Portfolio`.
+4. Render will auto-detect the `Dockerfile` and settings from `render.yaml`.
+5. Select the **Free** instance type and click **Deploy Web Service**.
+6. In ~2 minutes, your portfolio will be live with a free HTTPS URL (e.g., `https://public-portfolio-xxxx.onrender.com`).
+
+### Traditional Shared Hosting
 Upload project files excluding `.env`; run `composer install --no-dev --optimize-autoloader` (or upload `vendor`); create server `.env` with `APP_ENV=production` and database credentials; and make `public/uploads/projects/` writable. Point the document root to `public` and configure an `/admin` alias if required by the hosting panel. MySQL works on most shared PHP hosts; MongoDB additionally requires the PHP extension and MongoDB/Atlas connectivity. Never expose `.env`.
 
 ## Security and testing

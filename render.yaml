@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: public-portfolio
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: main
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DB_DRIVER
+        value: file
